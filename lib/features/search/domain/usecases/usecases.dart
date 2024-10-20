@@ -1,0 +1,1 @@
+export 'get_movie_searched_usecase.dart';

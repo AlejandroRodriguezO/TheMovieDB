@@ -1,0 +1,1 @@
+export 'detail_datasource.dart';
