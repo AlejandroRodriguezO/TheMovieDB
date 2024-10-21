@@ -1,6 +1,5 @@
 #  the_movie_db
 
-
 ## Como usarlo
 **Paso 1:**
 
@@ -44,7 +43,7 @@ flutter test
 Ésta es la estructura de carpetas que nos proporciona flutter.
 
 ```
-superlikers/
+the_movie_db/
 |- android
 |- assets
 |- build
