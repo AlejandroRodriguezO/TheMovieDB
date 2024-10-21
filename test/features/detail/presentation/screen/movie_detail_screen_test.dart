@@ -12,6 +12,8 @@ import 'package:the_movie_db/core/core.dart';
 import 'package:the_movie_db/features/detail/detail.dart';
 import 'package:the_movie_db/features/detail/presentation/widgets/widgets.dart';
 
+import '../../../../helpers/mocks/movie_detail_mock.dart';
+
 class MockDetailMovieCubit extends MockCubit<DetailMovieState>
     implements DetailMovieCubit {}
 
@@ -30,16 +32,6 @@ void main() {
   tearDown(() => movieCubit.close());
 
   const int id = 123456;
-
-  const DetailEntity movieDetail = DetailEntity(
-    title: 'title',
-    posterPath: 'posterPath',
-    overview: 'overview',
-    releaseDate: 'releaseDate',
-    genres: <GenreEntity>[
-      GenreEntity(name: 'name'),
-    ],
-  );
 
   final ScreenUtilInit app = ScreenUtilInit(
     designSize: const Size(360, 640),

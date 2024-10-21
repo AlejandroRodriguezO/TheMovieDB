@@ -17,8 +17,8 @@ class SearchCubit extends Cubit<SearchState> {
   final Debouncer _debouncer = Debouncer(milliseconds: 500);
 
   Future<void> searchTerm(String query) async {
-    emit(const SearchMovieLoading());
     if (query.length > 2) {
+      emit(const SearchMovieLoading());
       _debouncer.run(() async {
         final Either<AppError, List<MovieEntity>> result =
             await _searchedUsecase(params: query);

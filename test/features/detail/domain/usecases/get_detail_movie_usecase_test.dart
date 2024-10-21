@@ -5,6 +5,7 @@ import 'package:the_movie_db/core/core.dart';
 import 'package:the_movie_db/features/detail/detail.dart';
 
 import '../../../../helpers/helper.mocks.dart';
+import '../../../../helpers/mocks/movie_detail_mock.dart';
 
 void main() {
   late GetDetailMovieUsecase getDetailMovieUsecase;
@@ -19,26 +20,18 @@ void main() {
 
   const int id = 123456;
 
-  const DetailEntity detailEntity = DetailEntity(
-    title: 'title',
-    posterPath: 'posterPath',
-    overview: 'overview',
-    releaseDate: 'releaseDate',
-    genres: <GenreEntity>[
-      GenreEntity(name: 'name'),
-    ],
-  );
+
 
   test('should get Detail', () async {
     // arrange
     when(mockDetailRepository.getDetailMovie(id)).thenAnswer(
-        (_) async => const Right<AppError, DetailEntity>(detailEntity));
+        (_) async => const Right<AppError, DetailEntity>(movieDetail));
 
     // act
     final Either<AppError, DetailEntity> result =
         await getDetailMovieUsecase(params: id);
 
     // assert
-    expect(result, const Right<AppError, DetailEntity>(detailEntity));
+    expect(result, const Right<AppError, DetailEntity>(movieDetail));
   });
 }

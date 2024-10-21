@@ -13,6 +13,7 @@ class SearchMovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      key: const Key('movie_gesture_detector'),
       onTap: () => Navigator.of(context).push(
         MaterialPageRoute<MovieDetailScreen>(
           builder: (BuildContext context) => BlocProvider<DetailMovieCubit>(

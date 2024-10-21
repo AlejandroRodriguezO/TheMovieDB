@@ -57,6 +57,22 @@ class MoviePoster extends StatelessWidget {
                       ))
                   .toList(),
             ),
+            trailing: FittedBox(
+              child: Row(
+                children: <Widget>[
+                  const Icon(Icons.star, color: Colors.amber),
+                  SizedBox(width: 4.w),
+                  Text(
+                    (movie.voteAverage / 2).toStringAsFixed(1),
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
         Positioned(

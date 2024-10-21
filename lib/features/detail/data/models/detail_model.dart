@@ -9,6 +9,7 @@ class DetailModel extends DetailEntity {
     required super.overview,
     required super.releaseDate,
     required super.genres,
+    required super.voteAverage,
   });
 
   factory DetailModel.fromJson(Json json) => DetailModel(
@@ -21,5 +22,6 @@ class DetailModel extends DetailEntity {
             (dynamic x) => GenreModel.fromJson(x),
           ),
         ),
+        voteAverage: json['vote_average'],
       );
 }

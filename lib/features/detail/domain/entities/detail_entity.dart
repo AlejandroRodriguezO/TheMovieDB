@@ -9,6 +9,7 @@ class DetailEntity extends Equatable {
     required this.overview,
     required this.releaseDate,
     required this.genres,
+    required this.voteAverage,
   });
 
   final String title;
@@ -16,6 +17,7 @@ class DetailEntity extends Equatable {
   final String overview;
   final String releaseDate;
   final List<GenreEntity> genres;
+  final num voteAverage;
 
   @override
   List<Object?> get props => <Object?>[
@@ -24,5 +26,6 @@ class DetailEntity extends Equatable {
         overview,
         releaseDate,
         genres,
+        voteAverage,
       ];
 }

@@ -7,6 +7,7 @@ import 'package:the_movie_db/core/core.dart';
 import 'package:the_movie_db/features/detail/detail.dart';
 
 import '../../../../helpers/helper.mocks.dart';
+import '../../../../helpers/mocks/movie_detail_mock.dart';
 
 void main() {
   late MockDetailDatasource mockDetailDatasource;
@@ -20,16 +21,6 @@ void main() {
   });
   const int id = 123456;
   group('get detail movie', () {
-    const DetailModel detailModel = DetailModel(
-      title: 'title',
-      posterPath: 'posterPath',
-      overview: 'overview',
-      releaseDate: 'releaseDate',
-      genres: <GenreEntity>[
-        GenreModel(name: 'name'),
-      ],
-    );
-
     test(
       'should return detail movie when a call to data source is successful',
       () async {
@@ -150,7 +141,7 @@ void main() {
             .thenThrow(Exception('Failed to API Error'));
 
         // act
-        final  Either<AppError, List<CreditEntity>> result =
+        final Either<AppError, List<CreditEntity>> result =
             await detailRepository.getCreditMovie(id);
 
         // assert

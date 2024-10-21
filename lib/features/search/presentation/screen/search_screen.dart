@@ -32,9 +32,8 @@ class SearchScreen extends SearchDelegate<dynamic> {
 
   @override
   Widget buildResults(BuildContext context) {
-    if (query.length > 2) {
-      searchCubit.searchTerm(query);
-    }
+    searchCubit.searchTerm(query);
+
     return SearchResult(
       searchCubit: searchCubit,
     );
@@ -42,9 +41,8 @@ class SearchScreen extends SearchDelegate<dynamic> {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    if (query.length > 2) {
-      searchCubit.searchTerm(query);
-    }
+    searchCubit.searchTerm(query);
+
     return SearchResult(
       searchCubit: searchCubit,
     );

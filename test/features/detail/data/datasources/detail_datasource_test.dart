@@ -17,6 +17,7 @@ void main() {
   });
 
   const int id = 123456;
+  
   test('should detail return 200', () async {
     // Arrange
 
@@ -35,6 +36,7 @@ void main() {
           'poster_path': '/eiVQORVyVuNNZHPAELuWtlXoQsD.jpg',
           'release_date': '2019-07-19',
           'title': 'Batman: Hush',
+          'vote_average':7.3,
         },
         requestOptions: RequestOptions(),
         statusCode: 200,

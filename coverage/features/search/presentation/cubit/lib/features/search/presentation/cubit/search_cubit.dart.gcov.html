@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-10-20 11:23:57</td>
+            <td class="headerValue">2024-10-21 08:52:28</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -70,17 +70,17 @@
 <span id="L8"><span class="lineNum">       8</span>              : part 'search_state.dart';</span>
 <span id="L9"><span class="lineNum">       9</span>              : </span>
 <span id="L10"><span class="lineNum">      10</span>              : class SearchCubit extends Cubit&lt;SearchState&gt; {</span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">           3 :   SearchCubit({required GetMovieSearchedUsecase searchedUsecase})</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC tlaBgGNC">           4 :   SearchCubit({required GetMovieSearchedUsecase searchedUsecase})</span></span>
 <span id="L12"><span class="lineNum">      12</span>              :       : _searchedUsecase = searchedUsecase,</span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           3 :         super(const SearchMovieInitial());</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           4 :         super(const SearchMovieInitial());</span></span>
 <span id="L14"><span class="lineNum">      14</span>              : </span>
 <span id="L15"><span class="lineNum">      15</span>              :   final GetMovieSearchedUsecase _searchedUsecase;</span>
 <span id="L16"><span class="lineNum">      16</span>              : </span>
 <span id="L17"><span class="lineNum">      17</span>              :   final Debouncer _debouncer = Debouncer(milliseconds: 500);</span>
 <span id="L18"><span class="lineNum">      18</span>              : </span>
-<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           1 :   Future&lt;void&gt; searchTerm(String query) async {</span></span>
-<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           1 :     emit(const SearchMovieLoading());</span></span>
-<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           2 :     if (query.length &gt; 2) {</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           2 :   Future&lt;void&gt; searchTerm(String query) async {</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           4 :     if (query.length &gt; 2) {</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           1 :       emit(const SearchMovieLoading());</span></span>
 <span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           3 :       _debouncer.run(() async {</span></span>
 <span id="L23"><span class="lineNum">      23</span>              :         final Either&lt;AppError, List&lt;MovieEntity&gt;&gt; result =</span>
 <span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           2 :             await _searchedUsecase(params: query);</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-10-20 11:23:57</td>
+            <td class="headerValue">2024-10-21 08:52:28</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -64,29 +64,29 @@
 <span id="L2"><span class="lineNum">       2</span>              : </span>
 <span id="L3"><span class="lineNum">       3</span>              : import 'di.dart';</span>
 <span id="L4"><span class="lineNum">       4</span>              : </span>
-<span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC tlaBgGNC">           3 : Future&lt;void&gt; detailDependencies() async {</span></span>
-<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">           3 :   locator</span></span>
-<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">           3 :     ..registerLazySingleton&lt;DetailDatasource&gt;(</span></span>
+<span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC tlaBgGNC">           5 : Future&lt;void&gt; detailDependencies() async {</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">           5 :   locator</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">           5 :     ..registerLazySingleton&lt;DetailDatasource&gt;(</span></span>
 <span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">           2 :       () =&gt; DetailDatasourceImpl(</span></span>
 <span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">           2 :         client: locator(),</span></span>
 <span id="L10"><span class="lineNum">      10</span>              :       ),</span>
 <span id="L11"><span class="lineNum">      11</span>              :     )</span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           3 :     ..registerLazySingleton&lt;DetailRepository&gt;(</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           5 :     ..registerLazySingleton&lt;DetailRepository&gt;(</span></span>
 <span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           2 :       () =&gt; DetailRepositoryImpl(</span></span>
 <span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           2 :         datasource: locator(),</span></span>
 <span id="L15"><span class="lineNum">      15</span>              :       ),</span>
 <span id="L16"><span class="lineNum">      16</span>              :     )</span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           3 :     ..registerLazySingleton&lt;GetCreditMovieUsecase&gt;(</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           5 :     ..registerLazySingleton&lt;GetCreditMovieUsecase&gt;(</span></span>
 <span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           2 :       () =&gt; GetCreditMovieUsecase(</span></span>
 <span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           2 :         repository: locator(),</span></span>
 <span id="L20"><span class="lineNum">      20</span>              :       ),</span>
 <span id="L21"><span class="lineNum">      21</span>              :     )</span>
-<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           3 :     ..registerLazySingleton&lt;GetDetailMovieUsecase&gt;(</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           5 :     ..registerLazySingleton&lt;GetDetailMovieUsecase&gt;(</span></span>
 <span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           2 :       () =&gt; GetDetailMovieUsecase(</span></span>
 <span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           2 :         repository: locator(),</span></span>
 <span id="L25"><span class="lineNum">      25</span>              :       ),</span>
 <span id="L26"><span class="lineNum">      26</span>              :     )</span>
-<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           3 :     ..registerFactory&lt;DetailMovieCubit&gt;(</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           5 :     ..registerFactory&lt;DetailMovieCubit&gt;(</span></span>
 <span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           2 :       () =&gt; DetailMovieCubit(</span></span>
 <span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           2 :         detailMovieUsecase: locator(),</span></span>
 <span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">           2 :         creditMovieUsecase: locator(),</span></span>

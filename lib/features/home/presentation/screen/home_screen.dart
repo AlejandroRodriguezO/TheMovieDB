@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/di/di.dart';
+import '../../../../core/core.dart';
 import '../../../search/search.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,11 +10,21 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text('Home Screen'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Image.asset(
+          'assets/logo.png',
+          width: 150.w,
+        ),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: AppColors.white,
+              size: 22.w,
+            ),
             onPressed: () => showSearch(
               context: context,
               delegate: SearchScreen(locator<SearchCubit>()),
@@ -21,16 +32,22 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Welcome to the Home Screen!'),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Go to Second Screen'),
-            ),
-          ],
+      body: Container(
+        foregroundDecoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: <Color>[
+              Theme.of(context).primaryColor.withOpacity(0.3),
+              Theme.of(context).primaryColor,
+            ],
+          ),
+        ),
+        child: Image.asset(
+          'assets/home.jpg',
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: double.infinity,
         ),
       ),
     );

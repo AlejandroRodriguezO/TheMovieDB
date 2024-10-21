@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-10-20 11:23:57</td>
+            <td class="headerValue">2024-10-21 08:52:28</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -69,17 +69,17 @@
 <span id="L7"><span class="lineNum">       7</span>              : import '../constants/constants.dart';</span>
 <span id="L8"><span class="lineNum">       8</span>              : import 'di.dart';</span>
 <span id="L9"><span class="lineNum">       9</span>              : </span>
-<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC tlaBgGNC">           9 : final GetIt locator = GetIt.instance;</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC tlaBgGNC">          15 : final GetIt locator = GetIt.instance;</span></span>
 <span id="L11"><span class="lineNum">      11</span>              : </span>
-<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           3 : Future&lt;void&gt; initializeDependencies() async {</span></span>
-<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           6 :   locator.registerSingleton&lt;Dio&gt;(</span></span>
-<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           3 :     Dio(</span></span>
-<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">           3 :       BaseOptions(</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           5 : Future&lt;void&gt; initializeDependencies() async {</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          10 :   locator.registerSingleton&lt;Dio&gt;(</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           5 :     Dio(</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">           5 :       BaseOptions(</span></span>
 <span id="L16"><span class="lineNum">      16</span>              :         baseUrl: ApiUrls.baseUrl,</span>
-<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           3 :         headers: &lt;String, String&gt;{</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           5 :         headers: &lt;String, String&gt;{</span></span>
 <span id="L18"><span class="lineNum">      18</span>              :           HttpHeaders.contentTypeHeader: 'application/json',</span>
 <span id="L19"><span class="lineNum">      19</span>              :         },</span>
-<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           3 :         queryParameters: &lt;String, String&gt;{</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           5 :         queryParameters: &lt;String, String&gt;{</span></span>
 <span id="L21"><span class="lineNum">      21</span>              :           'api_key': ApiUrls.apiKey,</span>
 <span id="L22"><span class="lineNum">      22</span>              :           'language': 'es-CO',</span>
 <span id="L23"><span class="lineNum">      23</span>              :         },</span>
@@ -87,8 +87,8 @@
 <span id="L25"><span class="lineNum">      25</span>              :     ),</span>
 <span id="L26"><span class="lineNum">      26</span>              :   );</span>
 <span id="L27"><span class="lineNum">      27</span>              : </span>
-<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           6 :   unawaited(searchDependencies());</span></span>
-<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           6 :   unawaited(detailDependencies());</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">          10 :   unawaited(searchDependencies());</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">          10 :   unawaited(detailDependencies());</span></span>
 <span id="L30"><span class="lineNum">      30</span>              : }</span>
         </pre>
               </td>
